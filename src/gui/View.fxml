@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+   <children>
+      <Label layoutX="136.0" layoutY="52.0" text="Calculator " textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumberOne" layoutX="115.0" layoutY="95.0" promptText="First number" />
+      <TextField fx:id="txtNumberTwo" layoutX="115.0" layoutY="138.0" promptText="Second number" />
+      <Label layoutX="43.0" layoutY="247.0" text="Result =" />
+      <Label fx:id="labelResult" layoutX="112.0" layoutY="247.0" />
+      <Button fx:id="btSum" layoutX="37.0" layoutY="188.0" mnemonicParsing="false" onAction="#onBtSum" text="Sum" />
+      <Button fx:id="btSub" layoutX="91.0" layoutY="188.0" mnemonicParsing="false" onAction="#onBtSubtraction" text="Subtract" />
+      <Button fx:id="btMulti" layoutX="172.0" layoutY="188.0" mnemonicParsing="false" onAction="#onBtMultiplication" text="Mutiplication" />
+      <Button fx:id="btDivision" layoutX="283.0" layoutY="188.0" mnemonicParsing="false" onAction="#onBtDivision" text="Division" />
+   </children>
+</Pane>
