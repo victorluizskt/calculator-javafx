@@ -1,16 +1,20 @@
 package gui;
 
 import guii.util.Alerts;
+import guii.util.Constraints;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.awt.event.ActionEvent;
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
-public class ViewController {
+public class ViewController implements Initializable {
 
     /// Declaring an attribute in JavaFX
     @FXML
@@ -92,5 +96,14 @@ public class ViewController {
         } catch (ArithmeticException | NumberFormatException e){
             Alerts.showAlert("Error", null, e.getMessage(), Alert.AlertType.ERROR);
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        Constraints.setTextFieldDouble(txtNumberOne);
+        Constraints.setTextFieldDouble(txtNumberTwo);
+        Constraints.setTextFieldMaxLength(txtNumberOne, 12);
+        Constraints.setTextFieldMaxLength(txtNumberOne, 12);
+
     }
 }
